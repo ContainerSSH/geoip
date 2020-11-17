@@ -1,5 +1,9 @@
 package dummy
 
-func New() (*GeoIPLookupProvider, error) {
-	return &GeoIPLookupProvider{}, nil
+import (
+	"github.com/containerssh/geoip/geoipprovider"
+)
+
+func New() (geoipprovider.LookupProvider, error) {
+	return &geoIPLookupProvider{}, nil
 }

@@ -2,6 +2,6 @@ package oschwald
 
 import backend "github.com/oschwald/geoip2-golang"
 
-type GeoIPLookupProvider struct {
+type geoIPLookupProvider struct {
 	geo *backend.Reader
 }

@@ -4,6 +4,6 @@ import (
 	"net"
 )
 
-func (g *GeoIPLookupProvider) Lookup(_ net.IP) (countryCode string) {
+func (g *geoIPLookupProvider) Lookup(_ net.IP) (countryCode string) {
 	return "XX"
 }

@@ -4,7 +4,7 @@ import (
 	"net"
 )
 
-func (g *GeoIPLookupProvider) Lookup(remoteAddr net.IP) (countryCode string) {
+func (g *geoIPLookupProvider) Lookup(remoteAddr net.IP) (countryCode string) {
 	country, err := g.geo.Country(remoteAddr)
 	if err != nil {
 		return "XX"

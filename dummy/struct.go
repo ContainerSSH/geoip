@@ -1,4 +1,4 @@
 package dummy
 
-type GeoIPLookupProvider struct {
+type geoIPLookupProvider struct {
 }
