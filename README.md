@@ -1,12 +1,12 @@
 [![ContainerSSH - Launch Containers on Demand](https://containerssh.github.io/images/logo-for-embedding.svg)](https://containerssh.github.io/)
 
 <!--suppress HtmlDeprecatedAttribute -->
-<h1 align="center">ContainerSSH SSH GeoIP Library</h1>
+<h1 align="center">ContainerSSH IP to Country Code Library</h1>
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/containerssh/geoip?style=for-the-badge)](https://goreportcard.com/report/github.com/containerssh/geoip)
 [![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/ContainerSSH/geoip?style=for-the-badge)](https://lgtm.com/projects/g/ContainerSSH/geoip/)
 
-This library provides GeoIP lookup services for ContainerSSH.
+This library provides IP to Country Code lookup services for ContainerSSH.
 
 <p align="center"><strong>Note: This is a developer documentation.</strong><br />The user documentation for ContainerSSH is located at <a href="https://containerssh.github.io">containerssh.github.io</a>.</p>
 
