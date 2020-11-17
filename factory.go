@@ -10,14 +10,13 @@ import (
 
 // New creates a new lookup provider based on the configuration.
 //goland:noinspection GoUnusedExportedFunction
-func New(config Configuration) (provider geoipprovider.LookupProvider, err error) {
+func New(config Configuration) (geoipprovider.LookupProvider, error) {
 	switch config.Provider {
 	case DummyProvider:
-		provider, err = dummy.New()
+		return dummy.New()
 	case MaxMindProvider:
-		provider, err = oschwald.New(config.GeoIP2File)
+		return oschwald.New(config.GeoIP2File)
 	default:
 		return nil, fmt.Errorf("invalid provider: %s", config.Provider)
 	}
-	return provider, err
 }
