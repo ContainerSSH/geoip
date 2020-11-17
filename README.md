@@ -16,7 +16,9 @@ This library needs a configuration structure described in [config.go](config.go)
 
 ```go
 provider, err := geoip.New(geoip.Configuration{
+    // Can be "dummy" or "maxmind".
     provider: "maxmind",
+    // MMDB2 file for the MaxMind provider.
     GeoIP2File: "/path/to/maxmind/file.mmdb2",
 })
 if err != nil {
