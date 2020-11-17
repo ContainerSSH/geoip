@@ -1,4 +1,4 @@
-package geoipprovider
+package geoip
 
 import "net"
 
