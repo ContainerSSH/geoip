@@ -10,7 +10,7 @@ import (
 
 // New creates a new lookup provider based on the configuration.
 //goland:noinspection GoUnusedExportedFunction
-func New(config geoip.Configuration) (geoip.LookupProvider, error) {
+func New(config geoip.Config) (geoip.LookupProvider, error) {
 	switch config.Provider {
 	case geoip.DummyProvider:
 		return dummy.New()

@@ -10,8 +10,8 @@ const (
 	MaxMindProvider Provider = "maxmind"
 )
 
-// Configuration is the structure configuring the GeoIP lookup process.
-type Configuration struct {
+// Config is the structure configuring the GeoIP lookup process.
+type Config struct {
 	Provider   Provider `yaml:"provider" json:"provider" default:"dummy"`
 	GeoIP2File string   `yaml:"maxmind-geoip2-file" json:"geoip2-file" default:"/var/lib/GeoIP/GeoIP2-Country.mmdb"`
 }

@@ -17,7 +17,7 @@ This library needs a configuration structure described in [config.go](config.go)
 ```go
 provider, err := geoipfactory.New(geoip.Configuration{
     // Can be "dummy" or "maxmind".
-    provider: "maxmind",
+    Provider: "maxmind",
     // MMDB2 file for the MaxMind provider.
     GeoIP2File: "/path/to/maxmind/file.mmdb2",
 })
@@ -44,5 +44,4 @@ type LookupProvider interface {
 }
 ```
 
-Once implemented you will need to add the necessary configuration options to [config.go](config.go) and add a factory
-method to [factory.go](factory.go).
+Once implemented you will need to add the necessary configuration options to [config.go](config.go) and add a factory method to [geoipfactory/factory.go](geoipfactory/factory.go).
