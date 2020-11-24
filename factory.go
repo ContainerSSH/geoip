@@ -1,20 +1,20 @@
-package geoipfactory
+package geoip
 
 import (
 	"fmt"
 
-	"github.com/containerssh/geoip"
 	"github.com/containerssh/geoip/dummy"
+	"github.com/containerssh/geoip/geoipprovider"
 	"github.com/containerssh/geoip/oschwald"
 )
 
 // New creates a new lookup provider based on the configuration.
 //goland:noinspection GoUnusedExportedFunction
-func New(config geoip.Config) (geoip.LookupProvider, error) {
+func New(config Config) (geoipprovider.LookupProvider, error) {
 	switch config.Provider {
-	case geoip.DummyProvider:
+	case DummyProvider:
 		return dummy.New()
-	case geoip.MaxMindProvider:
+	case MaxMindProvider:
 		return oschwald.New(config.GeoIP2File)
 	default:
 		return nil, fmt.Errorf("invalid provider: %s", config.Provider)
