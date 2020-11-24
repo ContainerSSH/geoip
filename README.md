@@ -15,7 +15,7 @@ This library provides IP to Country Code lookup services for ContainerSSH.
 This library needs a configuration structure described in [config.go](config.go). This configuration structure can be passed to the `geoipfactory.New()` method:
 
 ```go
-provider, err := geoipfactory.New(geoip.Configuration{
+provider, err := geoipfactory.New(geoip.Config{
     // Can be "dummy" or "maxmind".
     Provider: "maxmind",
     // MMDB2 file for the MaxMind provider.
