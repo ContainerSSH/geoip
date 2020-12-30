@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.4: Added Validate
+
+This release adds a `Validate()` method to the configuration structure.
+
 ## 0.9.3: Shorter config name
 
 This change renames the `Configuration` struct to `Config` for brevity.

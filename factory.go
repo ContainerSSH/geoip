@@ -9,8 +9,11 @@ import (
 )
 
 // New creates a new lookup provider based on the configuration.
-//goland:noinspection GoUnusedExportedFunction
 func New(config Config) (geoipprovider.LookupProvider, error) {
+	if err := config.Validate(); err != nil {
+		return nil, err
+	}
+
 	switch config.Provider {
 	case DummyProvider:
 		return dummy.New()
