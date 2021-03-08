@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.5: Dependency bump
+
+This release bumps the testify ang geoip-golang libraries.
+
 ## 0.9.4: Added Validate
 
 This release adds a `Validate()` method to the configuration structure.
@@ -20,7 +24,7 @@ This library needs a configuration structure described in [config.go](config.go)
 
 ```go
 provider, err := geoip.New(geoip.Configuration{
-    provider: "maxmind",
+    Provider: "maxmind",
     GeoIP2File: "/path/to/maxmind/file.mmdb2",
 })
 if err != nil {
